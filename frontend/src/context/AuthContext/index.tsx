@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import authService from '../services/Auth.service';
+import React, { useState, useEffect, useContext } from 'react';
+import { authService } from '../../services';
 
 interface AuthContextType {
   isLoggedIn: boolean;
@@ -12,11 +12,13 @@ interface AuthContextType {
 
 const AuthContext = React.createContext<AuthContextType | null>(null);
 
+export const useAuthContext = () => useContext(AuthContext);
+
 interface AuthProviderWrapperProps {
   children: React.ReactNode;
 }
 
-function AuthProviderWrapper(props: AuthProviderWrapperProps) {
+export const AuthContextProvider = (props: AuthProviderWrapperProps) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -80,6 +82,4 @@ function AuthProviderWrapper(props: AuthProviderWrapperProps) {
       {props.children}
     </AuthContext.Provider>
   );
-}
-
-export { AuthProviderWrapper, AuthContext };
+};
