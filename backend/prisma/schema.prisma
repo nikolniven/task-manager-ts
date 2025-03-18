@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  name  String
+  password String
+  email String  @unique
+  tasks Task[]
+}
+
+model Task {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  completed Boolean  @default(false)
+  priority  Int      @default(1) // 1: Low, 2: Medium, 3: High
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+}
