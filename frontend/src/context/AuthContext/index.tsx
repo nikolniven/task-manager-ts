@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { authService } from '../../services';
 
-interface AuthContextType {
+export interface AuthContextType {
   isLoggedIn: boolean;
   isLoading: boolean;
   user: any;
@@ -10,7 +10,7 @@ interface AuthContextType {
   logOutUser: () => void;
 }
 
-const AuthContext = React.createContext<AuthContextType | null>(null);
+const AuthContext = React.createContext<AuthContextType | {}>({});
 
 export const useAuthContext = () => useContext(AuthContext);
 

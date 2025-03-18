@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { HomePage, SignupPage } from './pages';
+import { HomePage, SignupPage, LoginPage } from './pages';
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="signup" element={<SignupPage />} />
+        <Route path="loginup" element={<LoginPage />} />
       </Routes>
     </>
   );
