@@ -36,18 +36,17 @@ export function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
+    <div className="min-h-screen flex items-center justify-center bg-teal-100 p-4">
+      <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md border border-teal-300">
+        <h1 className="text-3xl font-bold text-center text-teal-800 mb-6">
           Sign Up
         </h1>
-
+        <div className="bg-red-500 text-white p-4">Tailwind Test</div>
         <form onSubmit={handleSignupSubmit} className="space-y-4">
-          {/* Email */}
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-teal-700"
             >
               Email:
             </label>
@@ -57,16 +56,15 @@ export function SignupPage() {
               id="email"
               value={email}
               onChange={handleEmail}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full px-4 py-2 border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400"
               placeholder="you@example.com"
             />
           </div>
 
-          {/* Password */}
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-teal-700"
             >
               Password:
             </label>
@@ -76,16 +74,15 @@ export function SignupPage() {
               id="password"
               value={password}
               onChange={handlePassword}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full px-4 py-2 border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400"
               placeholder="********"
             />
           </div>
 
-          {/* Name */}
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-teal-700"
             >
               Name:
             </label>
@@ -95,30 +92,28 @@ export function SignupPage() {
               id="name"
               value={name}
               onChange={handleName}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full px-4 py-2 border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400"
               placeholder="John Doe"
             />
           </div>
 
-          {/* Error message */}
           {errorMessage && (
             <p className="text-red-600 text-sm mt-2">{errorMessage}</p>
           )}
 
-          {/* Submit button */}
           <div>
             <button
               type="submit"
-              className="w-full py-2 px-4 bg-indigo-500 text-white font-semibold rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full py-2 px-4 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400"
             >
               Sign Up
             </button>
           </div>
         </form>
 
-        <p className="mt-4 text-center text-sm text-gray-600">
+        <p className="mt-4 text-center text-sm text-teal-600">
           Already have an account?{' '}
-          <Link to="/login" className="text-indigo-600 hover:text-indigo-700">
+          <Link to="/login" className="text-teal-700 hover:text-teal-800">
             Login
           </Link>
         </p>
