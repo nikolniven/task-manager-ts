@@ -36,12 +36,12 @@ export function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-teal-100 p-4">
-      <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md border border-teal-300">
+    <div className="min-h-screen flex items-center justify-center p-6 ">
+      <div className="bg-teal-100 p-8 rounded-2xl shadow-lg w-full max-w-md border border-teal-300">
         <h1 className="text-3xl font-bold text-center text-teal-800 mb-6">
           Sign Up
         </h1>
-        <div className="bg-red-500 text-white p-4">Tailwind Test</div>
+
         <form onSubmit={handleSignupSubmit} className="space-y-4">
           <div>
             <label
@@ -104,7 +104,7 @@ export function SignupPage() {
           <div>
             <button
               type="submit"
-              className="w-full py-2 px-4 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full py-2 px-4 bg-teal-500 text-green font-semibold rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400"
             >
               Sign Up
             </button>

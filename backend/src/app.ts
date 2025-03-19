@@ -4,6 +4,7 @@ import prisma from './db';
 import authRoutes from './routes/auth.routes';
 import userRoutes from './routes/user.routes';
 import taskRoutes from './routes/task.routes';
+import configureMiddleware from './config';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -11,6 +12,7 @@ dotenv.config();
 // Initialize Express app
 const app = express();
 
+configureMiddleware(app);
 // Middleware to parse JSON requests
 app.use(express.json());
 
@@ -27,7 +29,6 @@ prisma
 // Define routes
 app.use('/auth', authRoutes);
 app.use('/tasks', taskRoutes);
-
 app.use('/user', userRoutes);
 // Error handling middleware
 app.use(

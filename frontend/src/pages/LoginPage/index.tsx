@@ -34,9 +34,9 @@ export function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
+    <div className="min-h-screen flex items-center justify-center p-6 ">
+      <div className="bg-teal-100 p-8 rounded-2xl shadow-lg w-full max-w-md border border-teal-300">
+        <h1 className="text-3xl font-bold text-center text-teal-800 mb-6">
           Login
         </h1>
 
@@ -88,7 +88,7 @@ export function LoginPage() {
           <div>
             <button
               type="submit"
-              className="w-full py-2 px-4 bg-indigo-500 text-white font-semibold rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full py-2 px-4 bg-teal-500 text-green font-semibold rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400"
             >
               Login
             </button>
@@ -97,7 +97,7 @@ export function LoginPage() {
 
         <p className="mt-4 text-center text-sm text-gray-600">
           Don't have an account yet?{' '}
-          <Link to="/signup" className="text-indigo-600 hover:text-indigo-700">
+          <Link to="/signup" className="text-teal-700 hover:text-teal-800">
             Sign Up
           </Link>
         </p>
