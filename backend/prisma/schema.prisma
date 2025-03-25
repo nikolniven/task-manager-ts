@@ -23,4 +23,17 @@ model Task {
   priority  Int      @default(1) // 1: Low, 2: Medium, 3: High
   userId    Int
   user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 }
+
+// model Task {
+//   id        Int      @id @default(autoincrement())
+//   title     String
+//   content   String
+//   completed Boolean  @default(false)
+//   priority  Int      @default(1) // 1: Low, 2: Medium, 3: High
+//   userId    Int
+//   createdAt DateTime  @default(now())
+//   updatedAt DateTime  @updatedAt
+// }
